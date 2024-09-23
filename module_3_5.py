@@ -6,5 +6,12 @@ def get_multiplied_digits(number):
     else:
         return first
 
-result = get_multiplied_digits(40203)
+number_to_work = str(40100002) # "Сырое" число на входе
+symbol_to_remove = "0"
+
+for symbol in symbol_to_remove:
+    number_to_work = number_to_work.replace(symbol, "")
+
+print(number_to_work) # Число без нолей
+result = get_multiplied_digits(number_to_work) # Передаем число в функцию
 print(result)
